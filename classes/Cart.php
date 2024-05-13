@@ -1,20 +1,30 @@
 <?php
 
-// Класс для представления товаров в корзине
+require_once 'DB.php';
+
+
 class Cart {
 
-    // Метод для добавления товара в корзину
-    public function addItem(Product $product, $quantity) {
+    private $customer;
+    private $db;
+
+    public function __construct() {
+        $this->customer = new Customer();
+        $this->db = new DB();
+    }
+
+    // Метод для добавления товара в БД корзины
+    public function addItem(Product $product, $quantity, $cartId) {
 
     }
 
-    // Метод для удаления товара из корзины
-    public function removeItem(Product $product) {
+    // Метод для удаления товара из БД корзины
+    public function removeItem($cartId, Product $product) {
 
     }
 
-    // Метод для получения общей стоимости товаров в корзине
-    public function getTotalPrice() {
+    // Метод для получения общей стоимости товаров корзине
+    public function getTotalPrice($cartId) {
 
     }
 }

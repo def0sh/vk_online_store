@@ -4,17 +4,17 @@
 
 class DB {
 
-    public function __construct($host, $port, $database) {
+    private $pdo;
 
+    public function __construct($host, $port, $database) {
+        // Подключение
+       // $this->pdo = new PDO($dsn, $username, $password, $options);
     }
 
     public function query($collectionName, $filter = [], $options = []) {
-        // Получение данных
+        // Запрос
     }
 
-    public function insert($collectionName, $document) {
-        // Запись данных
-    }
 
 }
 
